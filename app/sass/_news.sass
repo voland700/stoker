@@ -1,0 +1,91 @@
+
+.news_wrap
+	width: 100%
+	margin: 30px 0
+	background-color: $lightgrey
+.news_wrap-inner
+	padding: 30px 0
+	//margin-right: -20px
+
+.news_list
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+
+
+
+
+.news_item
+	width: calc(25% - 20px)
+	margin-right: 20px
+	background-color: #ffffff
+	cursor: pointer
+	box-shadow: 0 0 1px #ccc inset
+	transition: box-shadow .2s ease-out,border .2s ease-out
+
+	&:hover
+		.news_img_link::before
+			animation-duration: .4s
+			animation-fill-mode: both
+			animation-name: shine
+		.news_info_title-link
+			color: #145fa9
+
+.news_img_wrap
+
+
+.news_img_link
+	display: block
+	width: 100%
+	position: relative
+	overflow: hidden
+	&::before
+		position: absolute
+		top: 0
+		left: -50%
+		z-index: 2
+		display: block
+		content: ''
+		width: 25%
+		height: 100%
+		opacity: 0
+		background: linear-gradient(to right,rgba(255,255,255,0) 0,rgba(255,255,255,.3) 100%)
+		transform: skewX(-25deg)
+
+
+.news_img
+	width: 100%
+.news_info_wrap
+	padding: 15px 20px 22px 20px
+	overflow: hidden
+.nes_info_data
+	display: block
+	line-height: 18px
+	font-size: .9em
+	color: lighten($textcolor, 25% )
+	margin: 0 0 5px
+.news_info_title
+	display: block
+	font-weight: 400
+	font-size: 1.1em
+	line-height: 20px
+	margin-bottom: 0
+.news_info_title-link
+	color: $textcolor
+	&:hover
+		text-decoration: none
+
+@include media-breakpoint-down(md)
+	.news_item
+		width: calc(50% - 20px)
+		margin-bottom: 20px
+
+@include media-breakpoint-down(sm)
+	.news_wrap-inner
+		padding-left: 15px
+		padding-right: 15px
+@include media-breakpoint-down(xs)
+	.news_item
+		width: 100%
+		margin-right: 0

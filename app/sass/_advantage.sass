@@ -1,0 +1,65 @@
+.advantage_wrap
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	margin: 40px -10px 10px -10px
+	//margin-bottom: 30px
+
+.advantage_item
+	width: calc(25% - 10px)
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	margin: 0 10px
+	transition: all .3s ease-out
+	//border: 1px solid #999999
+	&:hover
+		.advantage_img
+			transition: all .3s ease-out
+			filter: opacity(70%)
+		.advantage_title-link
+			transition: all .3s ease-out
+			color: $accent
+
+.advantage_img-wrap
+	display: flex
+	justify-content: center
+	align-items: center
+	background: #fff
+	border-radius: 100%
+	width: 80px
+	height: 80px
+	min-width: 80px
+.advantage_img
+	min-width: 44px
+	min-height: 44px
+.advantage_img-link
+	display: block
+.advantage_title
+	flex-grow: 1
+	font-size: .95em
+	line-height: 1.25em
+	color: #555555
+	text-align: left
+	padding: 0 0 0 10px
+	white-space: normal
+.advantage_title-link
+	color: #555555
+	word-wrap: break-word
+	&:hover
+		text-decoration: none
+
+@include media-breakpoint-down(md)
+	.advantage_wrap
+		flex-wrap: wrap
+	.advantage_item
+		width: calc(50% - 20px)
+		margin-bottom: 10px
+	.advantage_wrap
+		margin-bottom: 0
+
+@media (max-width: 480px)
+	.advantage_wrap
+		margin-top: 20px
+	.advantage_item
+		width: 100%

@@ -1,0 +1,103 @@
+.dejavu_wrap_fluid
+	width: 100%
+	margin: 30px 0
+	background-color: $lightgrey
+	padding: 30px 0
+
+.dejavu_title
+	//margin: 26px 0 4px 0
+	font-size: 1.6em
+	color: #555
+	line-height: 30px
+	font-weight: 400
+	margin-bottom: 12px
+
+
+.dejavu_wrap
+	position: relative
+
+.dejavu_item
+	width: 100%
+	border: 1px solid darken($lightgrey, 2%)
+	border-radius: 4px
+	background-color: #ffffff
+	padding: 10px 10px 15px 10px
+	cursor: pointer
+	transition: border .2s ease-out, color .2s ease-out
+
+
+	&:hover
+		border-color: darken($lightgrey, 5%)
+		.dejavu_item_info_title-link
+			text-decoration: none
+			color: #145fa9
+
+
+
+.dejavu_item_wrap
+	display: flex
+	width: 100%
+	height: 70px
+.dejavu_item_img_warap
+	width: 30%
+	margin-right: 7px
+	box-sizing: border-box
+.dejavu_item_img_link
+	display: block
+	height: 100%
+.dejavu_item_img
+	width: 100%
+.dejavu_item_info_wrap
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	width: calc(69% - 8px)
+	box-sizing: border-box
+	padding-top: 5px
+.dejavu_item_info_title
+	height: 40px
+	overflow: hidden
+	text-overflow: ellipsis
+	white-space: normal
+	line-height: 18px
+	font-weight: 400
+	font-size: 13px
+	line-height: 20px
+	display: block
+.dejavu_item_info_title-link
+	color: #222222
+.dejavu_item_info_prece
+	font-weight: 700
+	text-align: right
+
+.dejavu-owl-nav
+	position: absolute
+	top: -40px
+	right: 15px
+	.owl-prev,
+	.owl-next
+		width: 30px
+		height: 30px
+		padding: 0
+		color: buttontext
+		background-color: #ffffff
+		border-width: 2px
+		border-style: outset
+		outline: none
+		border: none
+		box-shadow: 1px 1px 1px 0 rgba(0,0,0,.25)
+		transition: box-shadow .2s ease-out, color .2s ease-out
+		&:hover
+			color: $accent
+			box-shadow: 1px 1px 1px 0 rgba(0,0,0,.18)
+
+		span
+			font-size: 2em
+			line-height: .8
+
+	.owl-prev
+		margin-right: 5px
+
+@include media-breakpoint-down(xs)
+	.dejavu_item_img
+		max-width: 70px

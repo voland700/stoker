@@ -1,0 +1,97 @@
+// USER VARIABLES SECTION
+
+$accent: #ff6d00 // Accent Color
+$gray: #b0b0b0
+$lightgrey: #f9f9fa
+$bcolor: #f2f2f2
+$border: 1px solid #eee
+$blue:  #2585e5
+
+$hit: #2992d9
+$stock: #ffc438
+$advices: #893ca9
+$new: #4fad00
+$red: #e32330
+
+$fotterTop: #343435
+$footterBottom: #2e2e2f
+
+
+$fontsize: 14px
+$textcolor: #555 // Text Color
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$roboto: Roboto, sans-serif // Roboto Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+@import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		// font-display: swap // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format('woff2')
+
+@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $roboto
+	font-size: $fontsize
+	min-width: 320px
+	position: relative
+	line-height: 1.571428
+	overflow-x: hidden
+	color: $textcolor
+	background: #fff
+
+.btn
+	display: inline-block
+	background-color: $accent
+	//border-color: $accent
+	border: 0
+	border-radius: 2px
+	color: #ffffff
+	font-size: 	.97em
+	line-height: 18px
+	font-weight: normal
+	text-transform: none
+	text-decoration: none
+	padding: 7px 18px 9px
+	overflow: hidden
+	transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15)
+	&:hover
+		text-decoration: none
+		color: #ffffff
+		outline: 0
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)
