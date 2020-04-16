@@ -1,0 +1,44 @@
+.left_menu
+
+.left_menu_list
+	padding: 0
+	margin: 0
+	list-style: none
+
+.left_menu_item
+	display: block
+	width: 100%
+	box-sizing: border-box
+
+.left_menu_link
+	display: block
+	position: relative
+	width: 100%
+	height: 100%
+	padding: 11px 31px 13px 17px
+	background-color: #f8f8f9
+	border: 1px solid #f2f2f2
+	border-bottom-width: 0
+	font-size: .95em
+	color: #333333
+	text-decoration: none
+	text-align: left
+	&:last-child
+		border-bottom-width: 1px
+	&:hover,
+	&:focus
+		background-color: #ffffff
+		text-decoration: none
+		&::after
+			content: ''
+			width: 3px
+			height: 100%
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			background-color: $accent
+
+.elected .left_menu_link
+	background-color: $accent
+	color: #ffffff
