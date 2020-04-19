@@ -1,4 +1,5 @@
 .left_menu
+	margin-bottom: 30px
 
 .left_menu_list
 	padding: 0
@@ -17,7 +18,7 @@
 	height: 100%
 	padding: 11px 31px 13px 17px
 	background-color: #f8f8f9
-	border: 1px solid #f2f2f2
+	border: 1px solid $bcolor
 	border-bottom-width: 0
 	font-size: .95em
 	color: #333333
@@ -42,3 +43,94 @@
 .elected .left_menu_link
 	background-color: $accent
 	color: #ffffff
+
+
+.left_baners_list
+
+.left_baners_item
+	margin-bottom: 30px
+
+.left_baners_link
+	display: block
+	height: 100%
+.left_baners_img
+	display: block
+	max-width: 100%
+	height: auto
+	margin-left: auto
+	margin-right: auto
+	border-radius: 2px
+	transition: opacity .3s
+	&:hover
+		opacity: .85
+
+
+.left_articles_wrap
+	width: 100%
+	border: 1px solid #f2f2f2
+.left_articles_top_wrap
+	width: 100%
+	display: flex
+.left_articles_top_title
+	width: 100%
+	text-align: center
+	font-size: 1.15em
+	color: #1d2029
+	margin: 0
+	padding: 10px 0 7px 0
+.left_articles_top_link
+	width: 100%
+	a
+		display: block
+		height: 100%
+		text-align: center
+		color: $accent
+		padding: 10px 0 7px 0
+		transition: color .3s ease-out
+		&:hover
+			text-decoration: none
+			color: $textcolor
+
+
+.left_articles_list
+	list-style: none
+	margin: 0
+	padding: 0
+
+
+
+.left_articles_item
+	position: relative
+	border-bottom: 1px solid #f2f2f2
+	&:last-child
+		border-bottom: none
+
+.left_articles_link
+	display: block
+	position: relative
+	width: 100%
+	height: 100%
+	padding: 16px 19px 18px
+	font-size: .95em
+	color: #333333
+	text-decoration: none
+	text-align: left
+	overflow: hidden
+	transition: color .3s ease-out
+
+	&:hover,
+	&:focus
+		text-decoration: none
+		color: $accent
+		&::before
+			top: 0
+
+	&::before
+		content: ""
+		position: absolute
+		top: 100%
+		left: 0
+		bottom: 0
+		width: 2px
+		background: $accent
+		transition: top .3s
