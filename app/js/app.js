@@ -33,75 +33,20 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	});
 
-	/*--same-hight-bloks-main-page--*/
-	funcItemsHeight()
-	function funcItemsHeight() {
-		var menuItems = document.querySelectorAll('.advice_item');
-		var top = menuItems[0].offsetTop;
-		var arrHeight = [];
-		var arrItems = [];
-		for (var i = 0; i < menuItems.length; i++) {
-			menuItems[i].style.height = 'auto';
-		}
-		for (var i = 0; i < menuItems.length; i++) {
-			if (top != menuItems[i].offsetTop) {
-				arrHeight.sort(function (a, b) { return b - a });
-				for (var j = 0; j < arrItems.length; j++) {
-
-					arrItems[j].style.height = arrHeight[0] + 'px';
-				}
-				top = menuItems[i].offsetTop;
-				arrHeight.length = arrItems.length = 0;
-				i = i - 1;
-				continue;
-			}
-			arrHeight[arrHeight.length] = menuItems[i].offsetHeight;
-			arrItems[arrItems.length] = menuItems[i];
-		}
-		arrHeight.sort(function (a, b) { return b - a });
-		for (var j = 0; j < arrItems.length; j++) {
-			arrItems[j].style.height = arrHeight[0] + 'px';
-		}
-	}
-	window.onresize = funcItemsHeight
-
-	/*--tabs--*/
-	document.querySelectorAll('.advice_top_item').forEach(function(elem){
-		elem.addEventListener('click', function(item){
-			let elemSelected = item.target.parentElement;
-			let nameAttr = elemSelected.dataset.advice;
-			let nameList = document.querySelectorAll('.advice_top_item');
-			let tabsList;
-			if (!elemSelected.classList.contains('clicked')){
-				nameList.forEach(function(name){
-					if (name.classList.contains('clicked'))name.classList.remove('clicked');
-				});
-				elemSelected.classList.add('clicked');
-				tabsList = document.querySelectorAll('.advice_prodact_wrap');
-				tabsList.forEach(item => {
-					item.dataset.tab == nameAttr ? item.classList.add('behold') : item.classList.remove('behold');
-				})
+	function backToTop() {
+		let btnTop = $('#btn_up');
+		$(window).on('scroll', () => {
+			if ($(this).scrollTop() >= 2000 && window.innerWidth >= 576) {
+				btnTop.fadeIn();
+			} else {
+				btnTop.fadeOut();
 			}
 		});
-	});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		btnTop.on('click', () => {
+			$('html').animate({ scrollTop: 0 }, 1000);
+		});
+	}
+	backToTop();
 
 
 

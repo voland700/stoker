@@ -1,0 +1,251 @@
+.sorting_wrap
+	display: flex
+	justify-content: flex-start
+	align-content: center
+	height: 50px
+	padding: 0 15px
+.sorting_choosing
+	height: 20px
+	margin-top: auto
+	margin-bottom: auto
+	font-size: .96em
+	line-height: .96em
+	color: #a5a3a3
+.sorting_txt
+	margin-right: 20px
+.sorting_link
+	display: inline-block
+	color: #a5a3a3
+	margin-right: 20px
+	transition: color 20ms ease-out
+	.icon-down,
+	.icon-up
+		margin-left: 4px
+		font-size: .75em
+	&:hover,
+	&:focus
+		color: #333333
+		text-decoration: none
+.sorting_link.active
+	//color: #333333
+	color: $accent
+
+
+
+.list_wrap
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+	box-sizing: border-box
+.list_item_wrap
+	width: 25%
+	box-sizing: border-box
+	margin: 0 -1px -1px 0
+.list_item
+	position: relative
+	zoom: 1
+	background-color: #ffffff
+	border: 1px solid #f2f2f2
+	border-radius: 2px
+	height: 100%
+	cursor: pointer
+	padding: 30px 10px 25px 10px
+	transition: .2s
+
+.list_item_img_wrap
+	width: 100%
+	max-height: 130px
+	margin-bottom: 15px
+.list_item_img_link
+	display: block
+	height: 100%
+	position: relative
+
+
+
+.item_lable_wpap
+	position: absolute
+	top: -20px
+	width: 80%
+	height: auto
+	text-align: left
+.item_lable-hit,
+.item_lable-stock,
+.item_lable-advice,
+.item_lable-new
+	display: inline-block
+	color: #fff
+	font-size: .9em
+	line-height: 21px
+	border-radius: 3px
+	padding: 0 8px
+	margin: 0 1px 1px 0
+	text-shadow: 1px 1px 0 rgba(0,0,0,.1)
+	box-shadow: 0 1px 1px rgba(0,0,0,.1)
+.item_lable-hit
+	background-color: $hit
+.item_lable-stock
+	background-color: $stock
+.item_lable-advice
+	background-color: $advices
+.item_lable-new
+	background-color: $new
+
+.list_item_img
+	display: block
+	max-width: 130px
+	max-height: 130px
+	margin-left: auto
+	margin-right: auto
+.list_item_brend
+.list_item_info_wrap
+	margin-bottom: 20px
+.list_item_title
+	display: block
+	width: 100%
+	font-size: 1.1em
+	font-weight: normal
+	line-height: 1.3em
+	overflow: hidden
+	text-overflow: ellipsis
+	text-align: center
+	margin-bottom: 8px
+	a
+		color: #1d2029
+		padding: 10px 0
+		margin: 0
+
+
+.list_item_quantity
+	text-align: center
+	font-size: .85em
+	color: $textcolor
+	margin-bottom: 8px
+	.icon-checkmark1,
+	.icon-close-outline,
+	.icon-checkmark3
+		display: inline-block
+		margin-right: 2px
+	.icon-checkmark1
+		color: $new
+	.icon-checkmark3
+		color: $stock
+	.icon-close-outline
+		color: #999999
+
+
+.list_item_property_wrup
+.list_item_property
+	display: block
+	font-size: .85em
+	line-height: 1em
+	color: #999999
+	text-align: center
+	margin-bottom: 5px
+
+
+.list_item_price
+	font-size: 1.4em
+	font-weight: 700
+	line-height: 15px
+	text-align: center
+	color: #1d2029
+	margin: 25px 0 5px 0
+.list_item_price-old
+	font-size: .95em
+	//ine-height: 15px
+	font-weight: 400
+	color: #888
+	text-decoration: line-through
+	text-align: center
+
+.list_item_profit_wrap
+	display: flex
+	justify-content: center
+	font-size: .9em
+.list_profit_percent
+	display: inline-block
+	background: $red
+	color: #fff
+	line-height: 21px
+	border-radius: 3px
+	padding: 0 8px
+	margin: 3px 3px 3px 0
+	text-shadow: 1px 1px 0 rgba(0,0,0,.1)
+	box-shadow: 0 1px 1px rgba(0,0,0,.1)
+.list_profit_saving
+	//flex-grow: 1
+	display: inline-block
+	background: $stock
+	color: #fff
+	line-height: 21px
+	border-radius: 3px
+	padding: 0 8px
+	margin: 3px 0
+	text-shadow: 1px 1px 0 rgba(0,0,0,.1)
+	box-shadow: 0 1px 1px rgba(0,0,0,.1)
+.list_item_buy_wrap
+	display: none
+
+
+.list_buy_form
+	text-align: center
+.counter_wrap
+	box-sizing: border-box
+	border: 1px solid #f3f3f5
+	background: #f3f3f5
+	//font-size: 0
+	width: 84px
+	margin: 0 auto
+	display: inline-block
+	vertical-align: top
+	border-radius: 2px
+	user-select: none
+	height: 36px
+	margin-right: 5px
+	//box-shadow: 0 5px 10px 0 rgba(0,0,0,0.05), 0 4px 15px 0 rgba(0,0,0,0.05)
+.counter__btn
+	display: inline-block
+	width: 20px
+	text-align: center
+	font-size: 1.3em
+	transition: color 20ms ease-out
+	&:hover,
+	&:focus
+		color: $accent
+.counter__value
+	width: 34px
+	border: 0
+	border-left: 1px solid #f3f3f5
+	border-right: 1px solid #f3f3f5
+	background: #f3f3f5
+	color: #666
+	font-size: 13px
+	height: 34px
+	border-radius: 0
+	text-align: center
+	line-height: 13px
+	padding: 7px 3px
+	overflow: hidden
+.list_bay_btn
+	display: inline-block
+	background-color: $accent
+	border: 0
+	border-radius: 2px
+	color: #fff
+	font-size: .97em
+	line-height: 18px
+	font-weight: 400
+	text-transform: none
+	text-decoration: none
+	padding: 8px 18px 10px
+	overflow: hidden
+	transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15)
+	&:hover,
+	&:focus
+		text-decoration: none
+		color: #ffffff
+		outline: 0
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)
