@@ -1,0 +1,116 @@
+.product_wrap
+	display: flex
+	justify-content: space-between
+	border: 1px solid $bcolor
+	padding: 15px
+
+.product_img_wrap
+	width: calc(50% - 10px)
+	//position: relative
+
+	//border: 1px solid green
+
+
+.product_img_block
+	width: 100%
+	position: relative
+	margin-bottom: 15px
+	&::before
+		content: ''
+		display: block
+		padding-top: 120%
+.product_img_link
+	display: flex
+	position: absolute
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+.product_img
+	width: auto
+	max-width: 98%
+	height: auto
+	max-height: 98%
+	margin: auto
+
+.product_img_prew_list
+	position: relative
+	width: 80%
+	margin: 0 10% 15px 10%
+
+.product_img_prew_link
+	display: block
+	position: relative
+	box-sizing: border-box
+	border: 1px solid $bcolor
+	border-radius: 2px
+	transition: all .3s ease-out
+	&::before
+		content: ''
+		display: block
+		padding-top: 100%
+	&:focus,
+	&:hover
+		border-color: darken($bcolor, 15% )
+		.product_img_prew
+			opacity: .85
+
+
+.product_img_prew_inner
+	display: block
+	position: absolute
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	overflow: hidden
+
+.product_img_prew
+	max-width: 100%
+	height: 100%
+	object-fit: cover
+	transition: .5s
+
+//.prev-owl-nav
+.product_img_prew_list
+	.owl-nav
+		position: absolute
+		width: 100%
+		height: 50%
+		top: 50%
+		transform: translateY(-50%)
+		z-index: -1
+		.owl-prev
+			position: absolute
+			left: -35px
+		.owl-next
+			position: absolute
+			right: -35px
+		.owl-prev,
+		.owl-next
+			display: block
+			position: absolute
+			width: 35px
+			height: 35px
+			border: 0
+			outline: 0
+			background-color: transparent
+			z-index: 150
+			visibility: visible
+			opacity: 1
+			transition: all .3s ease-out
+			span
+				display: block
+				position: absolute
+				left: 50%
+				top: -50%
+				transform: translate(-50%,10%)
+				font-size: 30px
+		.owl-prev.disabled,
+		.owl-next.disabled
+			display: none
+
+
+.product_info_wrap
+	width: calc(50% - 10px)
+	//border: 1px solid green
