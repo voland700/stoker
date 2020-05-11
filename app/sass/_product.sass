@@ -7,9 +7,7 @@
 .product_img_wrap
 	width: calc(50% - 10px)
 	//position: relative
-
 	//border: 1px solid green
-
 
 .product_img_block
 	width: 100%
@@ -106,11 +104,158 @@
 				top: -50%
 				transform: translate(-50%,10%)
 				font-size: 30px
+			// &:hover,
+			// &:focus
+			// 	span
+			// 		color: $accent
 		.owl-prev.disabled,
 		.owl-next.disabled
 			display: none
 
 
+
 .product_info_wrap
 	width: calc(50% - 10px)
-	//border: 1px solid green
+
+.product_manufacturer_wrap
+	display: flex
+	justify-content: space-between
+	height: 40px
+	color: #666666
+	margin-bottom: 5px
+.product_manufacturer-article
+	width: 50%
+	display: flex
+	justify-content: center
+	align-items: center
+.product_manufacturer-logo-wrap
+	width: 50%
+	display: flex
+	justify-content: flex-end
+	a
+		display: block
+		height: 100%
+		transition: all .3s ease-out
+		&:hover
+			opacity: .8
+.product_manufacturer-logo
+	width: auto
+	height: 100%
+
+.product_preview_wrap
+	color: #333333
+	margin-bottom: 20px
+.product_preview_text
+	width: 100%
+	height: 55px
+	overflow: hidden
+	overflow-wrap: break-word
+	padding: 10px 0 5px 0
+	p
+		margin: 0
+		padding: 0
+.product_preview_to
+	font-size: .95em
+	color: #1569bc
+	cursor: pointer
+	transition: color .3s ease-out
+	.icon-down
+		display: inline-block
+		font-size: .7em
+		line-height: 1em
+		margin-left: 4px
+		transition: color .3s ease-out
+	&:hover,
+	&:focus
+		color: $textcolor
+
+.product_buy_wrap
+	border-top: 1px solid $bcolor
+	border-bottom: 1px solid $bcolor
+	padding: 15px 0
+.product_buy-price_wrap
+	display: flex
+	justify-content: flex-start
+	//align-items: center
+.product_buy_price
+	font-size: 1.7em
+	font-weight: 700
+	line-height: 1.4em
+	//padding-right: 5px
+	margin-right: 15px
+	color: #1d2029
+.product_buy_price-old
+	margin-top: 12px
+	font-size: 1.21em
+	line-height: 1.1em
+	font-weight: 400
+	color: #888
+	text-decoration: line-through
+
+
+.product_buy-benefit_wrap
+
+.product_buy-benefit-persent,
+.product_buy-benefit-sum
+	display: inline-block
+	line-height: 21px
+	border-radius: 3px
+	padding: 1px 8px
+	margin: 3px 3px 3px 0
+	box-shadow: 0 1px 1px rgba(0,0,0,.1)
+
+.product_buy-benefit-persent
+	background: $red
+	color: #fff
+	text-shadow: 1px 1px 0 rgba(0,0,0,.1)
+.product_buy-benefit-sum
+	background: $stock
+	color: #1d2029
+
+
+
+
+
+
+.product_buy_lot_wrap
+	font-size: 1em
+	color: #666666
+	margin: 15px 0
+
+	.icon-checkmark1,
+	.icon-close-outline,
+	.icon-checkmark3,
+	.icon-wallet
+		display: inline-block
+		margin-right: 2px
+	.icon-checkmark1
+		color: $new
+	.icon-checkmark3
+		color: $stock
+	.icon-close-outline
+		color: #999999
+	.icon-wallet
+		color: #666666
+
+.product_buy_lot
+	margin-right: 15px
+	.value
+		border-bottom: 1px dotted
+
+.product_buy_cheaper
+	.value
+		border-bottom: 1px dotted
+		cursor: pointer
+		transition: color .3s ease-out
+		&:hover
+			color: #1d2029
+
+
+.product_buy_block
+.add_form
+.product_buy_order
+.product_counter_wrap
+.product_counter__btn
+.product_counter__value
+.product-buy-btn
+.product-buy-btn-fast
