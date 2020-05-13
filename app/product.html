@@ -265,7 +265,7 @@
 								<div class="product_buy_order">
 
 										<div class="product_counter_wrap">
-											<span class="product_counter__btn" data-direction="minus">-</span>
+											<span class="product_counter__btn" data-direction="minus">&ndash;</span>
 											<input type="text" name="PHP_code" value="1" size="5" class="product_counter__value">
 											<span class="product_counter__btn" data-direction="plus">+</span>
 										</div>
@@ -277,16 +277,52 @@
 
 								</div>
 							</form>
-
 							<button class="product-buy-btn-fast" data-module="buyoneclick" data-id="4746">Быстрая покупка</button>
 						</div>
+					</div><!--END-buy-->
 
+					<div class="product_perk_wrap">
+						<section class="product_perk sale">
+							<h3 class="product_perk_title">
+								<a href="" class="product_perk_link">Скандинавское предложение - чугунные печи со скидкой</a>
+							</h3>
+							<div class="product_perk_text">Скидка на восемь популярным моделей Чугунных печей каминов Jotul и Morso</div>
+						</section>
+						<section class="product_perk thumb_up">
+							<h3 class="product_perk_title">
+								При покупке печи - дрова в подарок
+							</h3>
+							<div class="product_perk_text">При покупке любой печи-камина или каминной топки JOTUL, SCAN, MORSO – мы дарим Вам упаковку сухих березовых дров!</div>
+						</section>
+					</div>
 
-
-
-
+					<div class="product_share_wrap">
+						<div class="product_share">
+							<span class="product_share_btn">Поделится</span>
+								<div class="ya-share2" style="display: inline-block;"
+								data-services="vkontakte,facebook,odnoklassniki,twitter,viber,whatsapp,telegram"
+								data-limit="0"
+								data-copy="hidden"
+								data-url="Ссылка, которой нужно поделиться."
+								data-title="Заголовок, которым нужно поделиться."
+								data-image="URL - изображения, которым нужно поделиться"
+								data-description="Текст, которым нужно поделиться - ???"
+								></div>
+						</div>
+						<div class="product_offered">Информация о товаре носит исключительно ознакомительный характер и не является публичной офертой.</div>
 
 					</div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -778,16 +814,25 @@
 			}, namber);
 		});
 
-
-
-
-
-
-
-
-
-
-
+	/* --- Counter - quntity goods  ---*/
+		const counterProducts = function () {
+			const btns = document.querySelectorAll('.product_counter__btn');
+			btns.forEach(btn => {
+				btn.addEventListener('click', function () {
+					const direction = this.dataset.direction;
+					const inp = this.parentElement.querySelector('.product_counter__value');
+					const currentValue = +inp.value;
+					let newValue;
+					if (direction === 'plus') {
+						newValue = currentValue + 1;
+					} else {
+						newValue = currentValue - 1 > 1 ? currentValue - 1 : 1;
+					}
+					inp.value = newValue;
+				})
+			})
+		}
+		counterProducts();
 
 
 
@@ -819,6 +864,9 @@
 
 
 </script>
+<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js" async="async"></script>
+<script src="https://yastatic.net/share2/share.js" async="async"></script>
+
 
 </body>
 </html>

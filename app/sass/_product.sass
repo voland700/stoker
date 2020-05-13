@@ -172,11 +172,11 @@
 .product_buy_wrap
 	border-top: 1px solid $bcolor
 	border-bottom: 1px solid $bcolor
-	padding: 15px 0
+	padding: 15px 0 25px 0
 .product_buy-price_wrap
 	display: flex
 	justify-content: flex-start
-	//align-items: center
+	margin-bottom: 5px
 .product_buy_price
 	font-size: 1.7em
 	font-weight: 700
@@ -215,12 +215,10 @@
 
 
 
-
-
 .product_buy_lot_wrap
 	font-size: 1em
 	color: #666666
-	margin: 15px 0
+	margin: 15px 0 20px 0
 
 	.icon-checkmark1,
 	.icon-close-outline,
@@ -252,10 +250,230 @@
 
 
 .product_buy_block
+	user-select: none
+
 .add_form
+	display: inline-block
+
 .product_buy_order
+	display: inline-block
+	margin-right: 5px
 .product_counter_wrap
+	display: inline-block
+	height: 40px
+	background-color: #f3f3f5
+	border-radius: 3px
+	margin-right: 5px
 .product_counter__btn
+	display: inline-block
+	width: 28px
+	height: 100%
+	font-size: 1.3em
+	text-align: center
+	transition: color .3s ease-out
+	cursor: pointer
+	&:hover,
+	&:focus
+		color: $accent
+
 .product_counter__value
+	height: 38px
+	width: 65px
+	width: 34px
+	border: 0
+	border-left: 1px solid #f3f3f5
+	border-right: 1px solid #f3f3f5
+	background: #f3f3f5
+	color: #666
+	font-size: 1.2em
+	border-radius: 0
+	text-align: center
+	line-height: 1em
+	padding: 7px 1px
 .product-buy-btn
+	display: inline-block
+	width: auto
+	height: 40px
+	background-color: $accent
+	border: 0
+	border-radius: 2px
+	color: #ffffff
+	font-size: 1em
+	line-height: 18px
+	font-weight: 400
+	text-transform: none
+	text-decoration: none
+	padding-left: 20px
+	padding-right: 20px
+	overflow: hidden
+	transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out
+	&:hover,
+	&:focus
+		text-decoration: none
+		background-color: lighten($accent, 5%)
+		outline: 0
 .product-buy-btn-fast
+	display: inline-block
+	width: auto
+	height: 40px
+	background-color: transparent
+	border: 1px solid $accent
+	border-radius: 2px
+	color: $accent
+	font-size: 1em
+	line-height: 18px
+	font-weight: 400
+	text-transform: none
+	text-decoration: none
+	padding-left: 20px
+	padding-right: 20px
+	overflow: hidden
+	transition: color .15s ease-in-out, background-color .15s ease-in-out
+	&:hover,
+	&:focus
+		text-decoration: none
+		background-color: $accent
+		color: #ffffff
+		outline: 0
+
+.product-buy-btn:disabled,
+.product-buy-btn[disabled]
+	opacity: .7
+	cursor: default
+	&:hover,
+	&:focus
+		background-color: $accent
+.product-buy-btn-fast:disabled,
+.product-buy-btn-fast[disabled]
+	opacity: .7
+	cursor: default
+	&:hover,
+	&:focus
+		background-color: transparent
+		color: $accent
+
+.product_perk_wrap
+
+.product_perk
+	position: relative
+	padding: 20px 0 20px 55px
+	border-bottom: 1px solid #f2f2f2
+	.sale,
+	.new,
+	.persent,
+	.hit,
+	.thumb_up
+	&:before
+		content: ""
+		display: inline-block
+		position: absolute
+		width: 45px
+		height: 45px
+		background-image: url(/images/dest/icon/icons_goods.png)
+		background-repeat: no-repeat
+		left: 0
+		top: 23px
+.product_perk.new::before
+		background-position: -1px 0
+.product_perk.persent::before
+		background-position: -1px -46px
+.product_perk.hit::before
+		background-position: -1px -92px
+.product_perk.sale::before
+		background-position: -1px -138px
+.product_perk.thumb_up::before
+		background-position: -1px -184px
+
+
+.product_perk_title
+	font-size: 1.1em
+	font-weight: 700
+	line-height: 1.3
+	color: #1d2029
+.product_perk_link
+	color: #1d2029
+	transition: color .15s ease-in-out
+	&:hover
+		text-decoration: none
+.product_perk_text
+	font-size: .97em
+	color: #666666
+
+
+.product_share_wrap
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	padding-top: 20px
+	user-select: none
+.product_share
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	width: 135px
+	background: 0 0
+	border: 1px solid #f2f2f2
+	border-radius: 3px
+	margin-right: 25px
+.product_share_btn
+	display: inline-block
+	padding: 7px 12px
+	border-right: 1px solid #f2f2f2
+.product_share
+	.ya-share2
+		display: inline-block
+		height: 100%
+		transition: background-color .15s ease-in-out, color .15s ease-in-out
+		cursor: pointer
+		&:hover,
+		&:focus
+			.ya-share2__container_size_m .ya-share2__icon_more:before
+				color: $accent
+
+.product_share
+	.ya-share2__container_size_m,
+	.ya-share2__icon
+		display: flex
+		margin: auto
+		width: 35px
+		height: 35px
+	.ya-share2__container_size_m .ya-share2__icon_more:before
+		line-height: 28px
+		color: #555555
+	.ya-share2__icon .ya-share2__icon_more
+		height: 36px
+		width: 36px
+		background-size: 36px 36px
+	.ya-share2__list
+		margin: auto
+
+	.ya-share2__icon_more,
+	.ya-share2__icon_total-counter
+		background-color: transparent
+		border: 0
+		box-sizing: border-box
+		position: relative
+
+.product_offered
+	color: #a3a3a3
+	font-size: .8em
+	line-height: 18px
+
+
+@include media-breakpoint-down(lg)
+	.product_counter__btn
+		width: 25px
+	.product_counter__value
+		width: 32px
+	.product-buy-btn,
+	.product-buy-btn-fast
+		padding-left: 18px
+		padding-right: 18px
+
+@include media-breakpoint-down(sm)
+	.product_wrap
+		flex-wrap: wrap
+	.product_img_wrap
+		width: 100%
+	.product_info_wrap
+		width: 100%
