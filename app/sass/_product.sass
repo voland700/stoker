@@ -459,6 +459,59 @@
 	font-size: .8em
 	line-height: 18px
 
+.product_grace_wrap
+	display: flex
+	justify-content: space-around
+	padding-left: 15px
+	padding-right: 15px
+	border-right: 1px solid #f2f2f2
+	border-bottom: 1px solid #f2f2f2
+	border-left: 1px solid #f2f2f2
+.product_grace_item
+	width: 25%
+	display: flex
+	box-sizing: border-box
+	padding: 20px 10px
+.product_grace_img
+	width: 40px
+	height: auto
+	margin-right: 10px
+.product_grace_text,
+.product_grace_link
+	display: table
+	height: 100%
+	color: #555
+	font-size: .9em
+	line-height: 1.2em
+	transition: all .15s ease-in-out
+	span
+		display: table-cell
+		vertical-align: middle
+.product_grace_item:hover
+	.product_grace_link
+		text-decoration: none
+		color: #2585e5
+		//color: $accent
+	.product_grace_img-link
+		opacity: .9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @include media-breakpoint-down(lg)
 	.product_counter__btn
@@ -477,6 +530,16 @@
 		width: 100%
 	.product_info_wrap
 		width: 100%
+	.product_grace_wrap
+		flex-wrap: wrap
+	.product_grace_item
+		width: 50%
+
+@media (max-width: 450px)
+	.product_grace_item
+		width: 100%
+
+
 
 @media (max-width: 400px)
 	.product_buy_block
