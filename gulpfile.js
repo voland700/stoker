@@ -11,6 +11,7 @@ let paths = {
 	scripts: {
 		src: [
 			'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
+			'node_modules/blazy/blazy.min.js', // npm vendor example for Lazy Load (npm i blazy --save-dev)
 			'node_modules/owl.carousel/dist/owl.carousel.min.js', // npm vendor example (npm install --save owl.carousel)
 			'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', // npm vendor example ( npm install @fancyapps/fancybox --save-dev)
 			baseDir + '/js/app.js' // app.js. Always at the end

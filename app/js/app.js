@@ -49,5 +49,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	backToTop();
 
 
+	const bLazy = new Blazy();
 
 });

@@ -3,22 +3,39 @@
 	.owl-carousel .owl-item img
 		width: auto
 
+.prodact_recomend
+	.owl-stage-outer
+		border: 1px solid $bcolor
+		border-radius: 2px
+	.owl-item
+		border-right: 1px solid $bcolor
+
+.prodact_recomend_title
+	margin: 20px 0 15px
+	font-size: 1.5em
+	color: #555
+	line-height: 30px
+	font-weight: 400
+
 .recomend_item
-	border: 1px solid $bcolor
+	//border: 1px solid $bcolor
 	padding: 15px 15px 20px
 	position: relative
-	transition: all .3s ease-in-out
+	transition: opacity .3s ease-in-out, color .3s ease-in-out
 	//margin-right: -1px
 	&:hover,
 	&:focus
 		//border-color: darken($bcolor, 15%)
 		.recomend_btn_wrap
-			opacity: 1
+			animation-duration: .5s
+			animation-fill-mode: both
+			animation-name: occurrence
 		.recomend_img
 			opacity: .9
 		.recomend_name_link
 			text-decoration: none
 			color: #333333
+
 .recomend_inner
 	position: relative
 
@@ -32,9 +49,9 @@
 .recomend_img
 	display: block
 	width: auto
-	max-width: 90%
+	max-width: 70%
 	height: auto
-	max-height: 90%
+	max-height: 70%
 	margin: auto
 
 .recomend_lable_wpap
@@ -102,6 +119,10 @@
 	//visibility: hidden
 	opacity: 0
 
-
 .recomend_btn
 	margin-top: 20px
+
+@media (max-width: 400px)
+	.recomend_img
+		max-width: 95%
+		max-height: 95%

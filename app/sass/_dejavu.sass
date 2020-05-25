@@ -6,7 +6,7 @@
 
 .dejavu_title
 	//margin: 26px 0 4px 0
-	font-size: 1.6em
+	font-size: 1.5em
 	color: #555
 	line-height: 30px
 	font-weight: 400
@@ -72,7 +72,7 @@
 
 .dejavu-owl-nav
 	position: absolute
-	top: -40px
+	top: -42px
 	right: 15px
 	.owl-prev,
 	.owl-next
@@ -85,11 +85,13 @@
 		border-style: outset
 		outline: none
 		border: none
-		box-shadow: 1px 1px 1px 0 rgba(0,0,0,.25)
+		//border-left: 1px solid length($bcolor, 5%)
+		//border-top: 1px solid length($bcolor, 5%)
+		box-shadow: 1px 1px 1px 0 rgba(0,0,0,.25), -1px -1px 1px 0 rgba(0,0,0,.05)
 		transition: box-shadow .2s ease-out, color .2s ease-out
 		&:hover
 			color: $accent
-			box-shadow: 1px 1px 1px 0 rgba(0,0,0,.18)
+			box-shadow: 1px 1px 1px 0 rgba(0,0,0,.18), -1px -1px 1px 0 rgba(0,0,0,.05)
 
 		span
 			font-size: 2em
