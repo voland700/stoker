@@ -220,7 +220,6 @@ header
 	from
 		opacity: 0
 		transform: translate3d(0, -100%, 0)
-		display: block
 	to
 		opacity: 1
 		transform: translate3d(0, 0, 0)
@@ -260,9 +259,9 @@ header
 		position: relative
 		.menu_show
 			display: block
-			animation-name: fadeIn
-			animation-duration: 1s
-			animation-fill-mode: both
+			// animation-name: fadeIn
+			// animation-duration: 1s
+			// animation-fill-mode: both
 	.top_manag-txt
 		display: none
 	.top_adress
@@ -379,6 +378,7 @@ header
 
 	header .mob_showcase
 		display: block
+		z-index: 200
 
 	.mob_phone_top,
 	.mob_phone_namber,
@@ -400,6 +400,7 @@ header
 		background-size: 20px 20px
 		background-position: center center
 		cursor: pointer
+		margin-right: 10px
 	.mob_phone_namber a
 		color: #555555
 		font-weight: 700
