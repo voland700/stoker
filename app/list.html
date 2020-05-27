@@ -810,6 +810,8 @@
 				</div>
 				<!--END-item-->
 			</div>
+
+
 			<!--Start pagination-->
 			<div class="pagination">
 				<div class="pagination-wrap">
@@ -826,6 +828,8 @@
 					<div style="clear:both"></div>
 				</div>
 			</div><!--END-pagination-->
+
+
 
 
 
@@ -1352,10 +1356,31 @@
 	});
 
 
+	document.querySelectorAll('.list_buy_form').forEach(elem => {
+		elem.addEventListener('submit', function(e){
+			e.preventDefault();
+			let item = elem.closest('.list_item');
+			let ProductImg = item.querySelector('.list_item_img').src;
+			let ProductName = item.querySelector('.list_item_title > a').innerText;
 
+			swal({
+				title: 'Товар в корзине!',
+				text: ProductName,
+				imageUrl: ProductImg,
+				imageWidth: 200,
+				imageHeight: 200,
+				imageAlt: ProductName,
+				//animation: false
+				showCloseButton: true,
+				showCancelButton: true,
+				focusConfirm: false,
+				confirmButtonText: 'Продолжить',
+				cancelButtonText: '<a href="/personal/cart/" class="to_basket">В корзину</a>'
 
-
-
+			});
+			console.log(ProductImg);
+		})
+	});
 
 
 </script>

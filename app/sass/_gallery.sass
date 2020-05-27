@@ -1,0 +1,49 @@
+.gallery_wrap
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+	box-sizing: border-box
+	border-radius: 3px
+.gallery_item
+	width: 20%
+	background-color: $bcolor
+	padding: 3px
+.gallery_item_link
+	display: block
+	height: 100%
+	position: relative
+	overflow: hidden
+	transition: .5s
+	transition: transform .5s ease-out, background-color .5s ease-out
+	&::after
+		content: ""
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		bottom: 0
+		right: 0
+
+
+	&:hover,
+	&:focus
+		&::after
+			background-color: rgba(0,0,0,.3)
+			transition: background-color .5s ease-out
+		.gallery_item_img
+			transform: scale(1.1)
+			transition: transform .3s ease-out
+
+
+
+.gallery_item_img
+	width: 100%
+
+@include media-breakpoint-down(md)
+	.gallery_item
+		width: 25%
+
+@include media-breakpoint-down(sm)
+	.gallery_item
+		width: 50%

@@ -7,13 +7,32 @@
 	border: 1px solid $bcolor
 	border-radius: 3px
 	margin-bottom: 15px
-.article_main_img.center
-	width: 100%
 
-.article_main_img.right
-	width: 40%
-	float: left
-	margin-right: 15px
+.article_img_link
+	display: block
+
+.center
+	.article_img_link
+		width: 100%
+.left
+	.article_img_link
+		width: 40%
+		float: left
+		margin-right: 15px
+	.article_sepotate
+		width: calc(60% - 15px)
+		float: right
+.right
+	.article_img_link
+		width: 40%
+		float: right
+		margin-left: 15px
+	.article_sepotate
+		width: calc(60% - 15px)
+		float: left
+
+.article_main_img
+	width: 100%
 .article_prev
 	box-sizing: content-box
 	display: inline-block
@@ -22,4 +41,73 @@
 	border: none
 	background-color: $accent
 	margin: 20px 0
-.article
+
+.article_control
+	display: flex
+	justify-content: space-between
+	padding: 25px 0
+	margin-top: 25px
+	border-top: 1px solid $bcolor
+	border-bottom: 1px solid $bcolor
+
+
+.article_back
+		margin-left: 20px
+.article_back_link
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	width: 165px
+	background: 0 0
+	border: 1px solid $bcolor
+	border-radius: 3px
+	border-right: 1px solid $bcolor
+	color: #555555
+	transition: color .5s ease-out
+	&:hover,
+	&:focus
+		text-decoration: none
+		color: $accent
+.article_back_btn
+	display: inline-block
+	padding: 7px 10px
+	border-right: 1px solid $bcolor
+	line-height: 1em
+.icon-cheveron-left
+	font-size: 1.3em
+.article_btn_name
+	padding: 7px 12px
+	text-align: center
+
+
+@include media-breakpoint-down(md)
+	.left,
+	.right
+		.article_img_link
+			width: 70%
+			float: none
+			margin: 10px auto 10px auto
+		.article_sepotate
+			width: 100%
+			float: none
+@include media-breakpoint-down(sm)
+	.article_wrap
+		padding-left: 15px
+		padding-right: 15px
+	.left,
+	.right
+		.article_img_link
+			width: 100%
+	.article_control
+		.article_back
+			margin-left: 0
+		.product_share
+			margin-right: 0
+
+@media (max-width: 370px)
+	.article_control
+		flex-wrap: wrap
+		.article_back
+			margin: 0 auto 15px auto
+		.product_share
+			margin: 0 auto
