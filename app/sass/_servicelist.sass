@@ -1,0 +1,93 @@
+.servicelist_inner_wrap
+	margin-bottom: 35px
+.servicelist_prev
+	margin-bottom: 35px
+.servicelist_item
+	padding: 35px 15px
+	border-bottom: 1px solid $bcolor
+	transition: color .3s ease-out
+	&:first-child
+		border-top: 1px solid $bcolor
+	&:hover,
+	&:focus
+		.servicelist_title_link
+			text-decoration: none
+			color: $accent
+		.servicelist_img_link::before
+			animation: shine .5s
+			opacity: 1
+
+.servicelist_item_wrap
+	display: flex
+
+.servicelist_img_link
+	display: block
+	width: 250px
+	margin-right: 20px
+	overflow: hidden
+	position: relative
+	&::before
+		position: absolute
+		top: 0
+		left: -45%
+		z-index: 2
+		display: block
+		content: ''
+		width: 25%
+		height: 100%
+		opacity: 0
+		background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%)
+		transform: skewX(-25deg)
+.servicelist_img
+	width: 100%
+.servicelist_info
+	display: flex
+	flex-direction: column
+	width: 600px
+
+.servicelist_title
+	font-size: 1.1em
+	font-weight: normal
+	margin-bottom: 15px
+
+.servicelist_title_link
+	display: block
+	color: #222222
+.servicelist_descrip
+	color: #555555
+	margin-bottom: 15px
+	p
+		margin: 0
+.servicelist_btn
+	display: block
+	margin-top: auto
+	margin-bottom: auto
+	color: #555555
+	transition: color .3s ease-out
+	span
+		margin-left: 7px
+		font-size: 1.3em
+		line-height: .8em
+	&:hover,
+	&:focus
+		text-decoration: none
+		color: $accent
+
+@include media-breakpoint-down(md)
+	.servicelist_item_wrap
+		display: flex
+	.servicelist_img_link
+		width: calc(25% - 20px)
+	.servicelist_info
+		width: 75%
+
+@media (max-width: 480px)
+	.servicelist_item_wrap
+		flex-wrap: wrap
+	.servicelist_img_link
+		width: 100%
+		margin: 10px auto 20px auto
+	.servicelist_info
+		width: 100%
+	.servicelist_title_link
+		color: #333333
