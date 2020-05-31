@@ -8,8 +8,6 @@
 	width: 25%
 	display: flex
 	padding-right: 10px
-
-
 	[class^="icon-"],
 	[class*=" icon-"]
 		flex: none
@@ -36,28 +34,53 @@
 	color: #666666
 .contact_info
 
-.contact_info_content
-.contact_info_title
-.contact_info_txt
-
-
 .contact_ask
 	width: 25%
 	display: flex
 	.product-buy-btn-fast
 		margin: 0 auto
 
-.contact_elem_list
+.contacts_title
+	font-size: 1.6em
+	line-height: 24px
+	margin: 40px 0 26px
+.contacts_discrip
+	margin-bottom: 30px
+.contact_elem_wrap
+	margin-bottom: 60px
 .contact_elem
 	display: flex
+	margin-bottom: 30px
+	padding-bottom: 20px
+	border-bottom: 1px solid $bcolor
+	&:hover,
+	&:focus
+		.contact_elem_logo_link::before
+			animation: shine .5s
+			opacity: 1
 .contact_elem_logo_link
 	display: block
+	position: relative
+	overflow: hidden
 	width: 150px
 	flex: none
+	margin-right: 20px
+	&::before
+		position: absolute
+		top: 0
+		left: -45%
+		z-index: 2
+		display: block
+		content: ''
+		width: 25%
+		height: 100%
+		opacity: 0
+		background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%)
+		transform: skewX(-25deg)
 .contact_elem_logo
-	max-width: 70px
+	max-width: 100%
 .contact_elem_info
-	width: 70%
+	width: 75%
 .contact_elem_title
 	font-size: 1.1em
 .contact_elem_title_link
@@ -68,12 +91,100 @@
 		text-decoration: none
 		color: $accent
 .contact_elem_list
-.icon-envelop
+	list-style: none
+	padding-left: 10px
 
 .contact_elem_item
-.icon-location
-.icon-clock
+	margin-bottom: 5px
+	[class^="icon-"],
+	[class*=" icon-"]
+		margin-right: 10px
+		color: darken($gray, 10%)
+		opacity: .9
+
+
 .contact_elem_phones
-	width: 30%
+	width: 25%
+	ul
+		list-style: none
+		padding-left: 25px
+
 .contact_elem_item
+
 .contact_elem_phoe-link
+	color: #555555
+	transition: color .15s ease-in-out
+	&:hover,
+	&:focus
+		text-decoration: none
+		color: $accent
+	.icon-phone
+		display: none
+
+@include media-breakpoint-down(lg)
+	.contact_info_wrap
+		flex-wrap: wrap
+		justify-content: space-between
+
+	.contact_info
+		width: 40%
+		margin-bottom: 10px
+
+	.contact_ask
+		width: 40%
+		.product-buy-btn-fast
+			margin: 0 auto 0 0
+
+@include media-breakpoint-down(md)
+	.contact_elem
+		flex-wrap: wrap
+	.contact_elem_logo_link
+		width: 50%
+		margin: 0 0 20px 0
+		order: 1
+	.contact_elem_info
+		width: 100%
+		order: 3
+	.contact_elem_phones
+		width: 50%
+		order: 2
+@include media-breakpoint-down(sm)
+	.contact_info_wrap,
+	.contacts_title,
+	.contacts_discrip,
+	.contact_elem_wrap
+		padding-left: 15px
+		padding-right: 15px
+	.contact_info
+		width: 50%
+		font-size: 1em
+	.contact_ask
+		width: 50%
+	.contact_elem_phoe-link
+		.icon-phone
+			display: inline-block
+			font-size: 1em
+			line-height: 1
+@media (max-width: 500px)
+	.contact_info
+		width: 100%
+		margin-bottom: 20px
+		font-size: 1.1em
+	.contact_ask
+		width: 100%
+		.product-buy-btn-fast
+			margin: 15px auto 0 auto
+@media (max-width: 450px)
+	.contact_elem_logo_link
+		width: 100%
+		margin: 0 0 20px 0
+	.contact_elem_info
+		width: 100%
+		order: 2
+	.contact_elem_title
+		margin-bottom: 15px
+	.contact_elem_phones
+		width: 100%
+		order: 3
+		ul
+			padding-left: 10px
