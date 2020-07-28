@@ -180,8 +180,6 @@
 	justify-content: flex-end
 	margin-top: 1rem
 
-	//height: 60px
-
 .list_item_title
 	display: block
 	width: 100%
@@ -363,6 +361,30 @@
 		color: #ffffff
 		outline: 0
 		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)
+
+.swal2-confirm
+	box-shadow: 0 5px 10px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15)
+	transition: box-shadow .15s ease-in-out
+.button_to_basket
+	outline: 0
+	border-color: #3bc915
+	background-color: #3bc915
+	box-shadow: 0 5px 10px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15)
+	transition: box-shadow .15s ease-in-out
+.to_basket
+	color: #ffffff
+	&:hover,
+	&:focus
+		color: #ffffff
+		text-decoration: none
+
+.swal2-confirm,
+.button_to_basket
+	&:hover,
+	&:focus
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)
+
+
 
 @include media-breakpoint-down(lg)
 	.list_item_wrap
