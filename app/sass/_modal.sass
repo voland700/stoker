@@ -1,0 +1,79 @@
+.modal
+	display: block
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 100
+	width: 100%
+	height: 100%
+	overflow: hidden
+	outline: 0
+	background-color: rgba(#000000, .7)
+
+.modal-dialog
+	display: flex
+	justify-content: center
+
+.modal-content
+	max-width: 450px
+	background-color: #fff
+	//padding: 20px 15px
+	margin-top: 100px
+	pointer-events: auto
+	background-clip: padding-box
+	border: 1px solid rgba(0,0,0,.2)
+	border-radius: .3rem
+	outline: 0
+
+.modal-header
+	display: flex
+	justify-content: space-between
+	padding: 10px 10px 10px 15px
+	border-bottom: 1px solid #dee2e6
+
+.modal-icon
+	width: 30px
+	height: 30px
+	margin-right: 15px
+	margin-top: 5px
+
+.modal-title
+	align-self: flex-end
+	margin-bottom: 0
+	font-size: 1.6em
+	font-weight: 400
+.close
+	float: right
+	align-self: flex-start
+	width: 30px
+	height: 30px
+	font-size: 1.7rem
+	font-weight: 700
+	line-height: 1
+	color: #555555
+	border: none
+	background-color: transparent
+	transition: color .3s ease-out
+	&:hover,
+	&:focus
+		outline: none
+		color: $accent
+
+.modal-body
+
+	padding: 20px
+
+.contact
+.form-group
+	display: flex
+	justify-content: space-between
+	margin-bottom: 10px
+	label
+		font-size: 1.1em
+		margin-right: 15px
+
+.red-text
+	color: #c50202
+
+.form-control
+	width: 270px
