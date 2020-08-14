@@ -15,11 +15,13 @@
 .modal-dialog
 	display: flex
 	justify-content: center
+	align-items: center
+	align-self: center
+	height: 100%
 
 .modal-content
 	max-width: 450px
 	background-color: #fff
-	margin-top: 30px
 	pointer-events: auto
 	background-clip: padding-box
 	border: 1px solid rgba(0,0,0,.2)
@@ -36,19 +38,19 @@
 .modal-icon
 	width: 30px
 	height: 30px
-	margin-right: 15px
-	margin-top: 5px
+	margin-top: 3px
 
 .modal-title
 	align-self: flex-end
 	margin-bottom: 0
-	font-size: 1.6em
+	font-size: 1.5em
 	font-weight: 400
 .close
 	float: right
 	align-self: flex-start
 	width: 30px
 	height: 30px
+	margin-top: 3px
 	font-size: 1.7rem
 	font-weight: 700
 	line-height: 1
@@ -112,6 +114,127 @@
 	padding: 5px 5px 5px 40px
 	li
 		font-style: italic
+
+
+.modal_wrapper
+	width: 450px
+	background-color: #fff
+	pointer-events: auto
+	background-clip: padding-box
+	border: 1px solid rgba(0,0,0,.2)
+	border-radius: .3rem
+	outline: 0
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15)
+.modal_content
+	padding: 10px 20px 25px 20px
+
+
+
+
+.modal_item
+	display: flex
+	justify-content: space-between
+	margin-bottom: 10px
+	.mf-text
+		font-size: 1.1em
+		margin-right: 15px
+	input
+		width: 300px
+		border: 1px solid $gray
+		border-radius: 2px
+		padding: 5px 5px 5px 10px
+		&::placeholder
+			color: $gray
+		&:focus
+			border-color: #a5957e
+
+.mf-req
+	color: #c50202
+	padding-left: 3px
+
+.modal_text
+	margin-top: 15px
+	margin-bottom: 15px
+	label
+		width: 100%
+		margin-bottom: 3px
+	textarea
+		width: 100%
+		border: 1px solid $gray
+		border-radius: 2px
+		padding: 10px
+
+.modal_cuptcha
+	label
+		width: 100%
+		margin-bottom: 3px
+	.update
+		display: block
+		margin-top: 3px
+		font-style: italic
+
+		width: 150px
+		text-align: center
+
+
+.modal_cupcha_wrap
+	display: flex
+	.captcha_img
+		margin-right: 5px
+
+.modal_cup_inp
+	display: inline-block
+	width: 150px
+	height: 33px
+	border: 1px solid #555555
+	border-radius: 2px
+	padding: 2px 5px
+	font-size: 1.5em
+	text-align: center
+.feedback_form .btn_middle
+	display: block
+	margin-right: auto
+	margin-left: auto
+	margin-top: 20px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
