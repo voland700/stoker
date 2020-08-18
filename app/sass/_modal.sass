@@ -1,0 +1,377 @@
+.modal
+	display: none
+	opacity: 0
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 100
+	width: 100%
+	height: 100%
+	overflow: hidden
+	outline: 0
+	background-color: rgba(#000000, .5)
+	transition: opacity .3 ease-in-out
+
+.modal-dialog
+	display: flex
+	justify-content: center
+	align-items: center
+	align-self: center
+	height: 100%
+
+.modal-content
+	max-width: 450px
+	background-color: #fff
+	pointer-events: auto
+	background-clip: padding-box
+	border: 1px solid rgba(0,0,0,.2)
+	border-radius: .3rem
+	outline: 0
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15)
+
+.modal-header
+	display: flex
+	justify-content: space-between
+	padding: 10px 10px 10px 15px
+	border-bottom: 1px solid #dee2e6
+
+.modal-icon
+	width: 30px
+	height: 30px
+	margin-top: 3px
+
+.modal-title
+	align-self: flex-end
+	margin-bottom: 0
+	font-size: 1.5em
+	font-weight: 400
+.close
+	float: right
+	align-self: flex-start
+	width: 30px
+	height: 30px
+	margin-top: 3px
+	font-size: 1.7rem
+	font-weight: 700
+	line-height: 1
+	color: #555555
+	border: none
+	background-color: transparent
+	transition: color .3s ease-out
+	&:hover,
+	&:focus
+		outline: none
+		color: $accent
+
+.modal-body
+	padding: 25px 20px
+
+.contact
+.form-group
+	display: flex
+	justify-content: space-between
+	margin-bottom: 10px
+	label
+		font-size: 1.1em
+		margin-right: 15px
+
+.red-text
+	color: #c50202
+
+.form-control
+	width: 270px
+	border: 1px solid $gray
+	border-radius: 2px
+	padding: 5px 5px 5px 10px
+	&::placeholder
+		color: $gray
+		//opacity: .7
+.modal_info
+	font-size: .9em
+	line-height: 1.3
+	color: #999999
+	margin-top: 20px
+.modal_info-required
+	margin-bottom: 5px
+.user-agrement
+	margin-bottom: 0
+
+.modal-footer
+	border-top: 1px solid #dee2e6
+	display: flex
+	justify-content: center
+	padding: 15px 10px 20px 10px
+
+.modal.show
+	display: block
+	opacity: 1
+.form-control.hasError
+	background-color: rgba(red, .2)
+
+.masege_error
+	background-color: rgba(red, .2)
+	border-radius: 3px
+	padding: 5px 5px 5px 40px
+	li
+		font-style: italic
+
+.modal_wrapper
+	width: 450px
+	background-color: #fff
+	pointer-events: auto
+	background-clip: padding-box
+	border: 1px solid rgba(0,0,0,.2)
+	border-radius: .3rem
+	outline: 0
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15)
+.modal_content
+	padding: 10px 20px 25px 20px
+
+.modal_item
+	display: flex
+	justify-content: space-between
+	margin-bottom: 10px
+	.mf-text
+		font-size: 1.1em
+		margin-right: 15px
+	input
+		width: 300px
+		border: 1px solid $gray
+		border-radius: 2px
+		padding: 5px 5px 5px 10px
+		&::placeholder
+			color: $gray
+		&:focus
+			border-color: #a5957e
+	input.hasmistake
+		border: 1px solid red
+
+
+.mf-req
+	color: #c50202
+	padding-left: 3px
+
+.modal_text
+	margin-top: 15px
+	margin-bottom: 15px
+	label
+		width: 100%
+		margin-bottom: 3px
+	textarea
+		width: 100%
+		border: 1px solid $gray
+		border-radius: 2px
+		padding: 10px
+
+.modal_cuptcha
+	label
+		width: 100%
+		margin-bottom: 3px
+	.update
+		display: block
+		margin-top: 3px
+		font-style: italic
+		width: 150px
+		text-align: center
+
+
+.modal_cupcha_wrap
+	display: flex
+	.captcha_img
+		margin-right: 5px
+
+.modal_cup_inp
+	display: inline-block
+	width: 150px
+	height: 33px
+	border: 1px solid #555555
+	border-radius: 2px
+	padding: 2px 5px
+	font-size: 1.5em
+	text-align: center
+.feedback_form .btn_middle
+	display: block
+	margin-right: auto
+	margin-left: auto
+	margin-top: 20px
+
+.modal_masseges
+	background-color: rgba(red, .2)
+	border-radius: 3px
+	padding: 0 5px 0 40px
+	margin-bottom: 0
+	li
+		font-style: italic
+#modalMass
+	margin-bottom: 1rem
+
+
+
+.cheaper
+	display: none
+	opacity: 0
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 100
+	width: 100%
+	height: 100%
+	outline: 0
+	background-color: rgba(#000000, .5)
+	transition: opacity .3 ease-in-out
+
+.cheaper.show
+	display: block
+	opacity: 1
+.modal-cheaper
+	position: relative
+	height: 100%
+
+.cheaper_wrapper
+	width: 420px
+	background-color: #fff
+	pointer-events: auto
+	background-clip: padding-box
+	border: 1px solid rgba(0,0,0,.2)
+	border-radius: .3rem
+	outline: 0
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15)
+	margin: 50px auto 20px auto
+.cheaper_header
+	display: flex
+	align-items: center
+	padding: 25px 20px 20px 20px
+	border-bottom: 2px solid $accent
+	.search_btn-closed
+		margin-top: 3px
+.cheaper_title
+	flex-grow: 1
+	font-size: 1.6em
+	line-height: 1
+	font-weight: normal
+	margin-bottom: 0
+.cheaper_content
+	padding: 20px
+
+.cheaper_form
+.cheaper_item
+	margin-bottom: 10px
+	label
+		width: 100%
+		margin-bottom: 1px
+		padding: 5px
+	input
+		width: 100%
+		background: #f7f7f7
+		border: 1px solid #eeeeee
+		border-radius: 2px
+		box-shadow: none
+		color: #383838
+		height: auto
+		font-size: .95em
+		padding: 8px 13px 7px
+		width: 100%
+		outline: none
+		&::placeholder
+			color: darken($gray, 5%)
+		&:required
+			&:focus
+				border-color: darken(#eeeeee, 10%)
+
+.cheaper_message
+	width: 100%
+	background: #f7f7f7
+	border: 1px solid #eeeeee
+	border-radius: 2px
+	box-shadow: none
+	color: #383838
+	height: auto
+	font-size: .95em
+	padding: 8px 13px 7px
+	width: 100%
+	outline: none
+	margin-bottom: 10px
+	&:required
+		&:focus
+			border-color: darken(#eeeeee, 10%)
+
+.cheaper_agreement
+	margin-bottom: 25px
+.cheaper_check
+	margin-right: 5px
+
+.cheaper_mistakes
+	padding: 10px 10px 10px 30px
+	background: #f7f7f7
+	border: 1px solid #eee
+	border-radius: 2px
+	li
+		font-style: italic
+		color: red
+		line-height: 1.5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 500px)
+	.modal-title
+		line-height: 1.1
+	.modal-content
+		width: 90%
+	.form-group
+		flex-wrap: wrap
+		margin-bottom: 20px
+		label
+			width: 100%
+			margin: 0 0 2px 0
+	.form-control
+		width: 100%
+		padding: 10px
+	.modal_wrapper
+		width: 90%
+
+@media (max-width: 450px)
+	.modal_item
+		flex-wrap: wrap
+		label
+			width: 100%
+			margin-bottom: 3px
+		input
+			width: 100%
+
+
+	.cheaper_wrapper
+		width: auto
+		margin-left: 15px
+		margin-right: 15px
+
+
+
+
+@media (max-width: 400px)
+
+	.modal_cupcha_wrap
+		flex-wrap: wrap
+		justify-content: space-between
+	.captcha_img
+		width: 49%
+		height: auto
+		margin: 0
+	.modal_cup_inp
+		width: 49%
+		height: auto

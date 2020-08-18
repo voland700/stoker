@@ -258,7 +258,7 @@
 								<span class="value">Достаточно</span>
 							</span>
 
-							<span class="product_buy_cheaper">
+							<span class="product_buy_cheaper" id="askCheaper">
 								<span class="icon-wallet"></span>
 								<span class="value">Нашли дешевле?</span>
 							</span>
@@ -676,7 +676,114 @@
 				</div>
 
 			</div><!--END-RECOMEND-->
+				<!--Modal window: Do you faund this prodact more cheaper-->
 
+				<div class="cheaper" id="modalСheaper">
+
+					<section class="cheaper_wrapper fadeInDown">
+						<div class="cheaper_header">
+							<h3 class="cheaper_title">Нашли дешевле?</h3>
+							<span class="search_btn-closed" id="cheapClosed"></span>
+						</div>
+						<div class="cheaper_content">
+							<div id="Mistakes">
+								<ul class="cheaper_mistakes">
+									<li>Укажите Ваше имя</li>
+									<li>Укажите корректный Email адрес</li>
+									<li>Укажите наименование товара</li>
+									<li>Укажите ссылку на аналогичный товар</li>
+
+								</ul>
+							</div>
+							<form action="/" class="cheaper_form">
+
+								<div class="cheaper_item">
+									<label>Ваше имя<span class="mf-req">*</span></label>
+									<input type="text" name="name" value="" placeholder="Ваше имя" required="">
+								</div>
+
+								<div class="cheaper_item">
+									<label>Телефон<span class="mf-req">*</span></label>
+									<input type="tel" name="tel" value="" placeholder="8 (___)___-__-__" required="">
+								</div>
+
+								<div class="cheaper_item">
+									<label>E-mail<span class="mf-req">*</span></label>
+									<input type="email" name="email" value="" placeholder="mail@domen.com" required="">
+								</div>
+
+								<div class="cheaper_item">
+									<label>Название товара<span class="mf-req">*</span></label>
+									<input type="text" name="product" value="" required="">
+								</div>
+
+								<div class="cheaper_item">
+									<label>Ссылка на товар другого магазина<span class="mf-req">*</span></label>
+									<input type="text" name="link" value="" required="">
+								</div>
+
+								<div class="cheaper_item">
+									<label>Сообщение</label>
+									<textarea name="message" cols="40" rows="5" class="cheaper_message"></textarea>
+								</div>
+
+								<div class="cheaper_agreement">
+									<input type="checkbox" class="cheaper_check" name="agreement" checked="checked" required="">
+									<label>Я согласен на <a href="/company/agreement/" target="_blank">обработку персональных данных</a></label>
+								</div>
+
+								<input type="submit" class="btn_middle" value="Отправить" id="btnSend">
+
+							</form>
+
+						</div>
+
+					</section>
+
+
+				</div><!-- END-MODAL-->
+				<script>
+					document.getElementById('askCheaper').addEventListener('click', function(){
+						let modalСheaper = document.getElementById('modalСheaper');
+						let cheapClosed = document.getElementById('cheapClosed');
+						let Mistakes = document.getElementById('Mistakes');
+
+						function showWindow() {
+							modalСheaper.classList.add('show');
+						}
+						function hideWindow() {
+							modalСheaper.classList.remove('show');
+						}
+
+						if (!modalСheaper.classList.contains('show')) showWindow();
+
+						cheapClosed.addEventListener('click', function() {
+							if (modalСheaper.classList.contains('show')) hideWindow();
+						});
+
+						modalСheaper.addEventListener('click', function() {
+							if (!event.target.closest('.cheaper_wrapper')){
+								if (modalСheaper.classList.contains('show')) hideWindow();
+							}
+						});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					});
+				</script>
 
 
 		</div><!--END-frame_mine-->

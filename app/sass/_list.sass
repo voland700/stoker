@@ -81,23 +81,60 @@
 	width: 100%
 	max-height: 130px
 	margin-bottom: 15px
+
+@-webkit-keyframes line-scale
+	0%
+		transform: scaley(1)
+	50%
+		transform: scaley(0.4)
+	100%
+		transform: scaley(1)
+@keyframes line-scale
+	0%
+		transform: scaley(1)
+	50%
+		transform: scaley(0.4)
+	100%
+		transform: scaley(1)
+
+.line-scale > div:nth-child(1)
+	animation: line-scale 1s -0.4s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08)
+.line-scale > div:nth-child(2)
+	animation: line-scale 1s -0.3s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08)
+.line-scale > div:nth-child(3)
+	animation: line-scale 1s -0.2s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08)
+.line-scale > div:nth-child(4)
+	animation: line-scale 1s -0.1s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08)
+.line-scale > div:nth-child(5)
+	animation: line-scale 1s 0s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08)
+
+.line-scale > div
+	background-color: $accent
+	width: 4px
+	height: 35px
+	border-radius: 2px
+	margin: 2px
+	animation-fill-mode: both
+	display: inline-block
+
+
+.list_item_loader
+	display: none
+	position: absolute
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	background-color: rgba(#ffffff, .7)
+	z-index: 1
+.line-scale
+	margin: auto
+
+
 .list_item_img_link
 	display: block
 	height: 100%
 	position: relative
-
-	// &::before
-	// 	position: absolute
-	// 	top: 0
-	// 	left: -50%
-	// 	z-index: 2
-	// 	display: block
-	// 	content: ''
-	// 	width: 25%
-	// 	height: 100%
-	// 	opacity: 0
-	// 	background: linear-gradient(to right,rgba(255,255,255,0) 0,rgba(255,255,255,.3) 100%)
-	// 	transform: skewX(-25deg)
 
 .item_lable_wpap
 	position: absolute
@@ -105,6 +142,7 @@
 	width: 80%
 	height: auto
 	text-align: left
+	z-index: 10
 .item_lable-hit,
 .item_lable-stock,
 .item_lable-advice,
@@ -135,7 +173,12 @@
 	margin-right: auto
 .list_item_brend
 .list_item_info_wrap
-	//height: 60px
+	display: flex
+	flex-direction: column
+	flex-grow: 1
+	align-items: center
+	justify-content: flex-end
+	margin-top: 1rem
 
 .list_item_title
 	display: block
@@ -180,6 +223,8 @@
 	color: #999999
 	text-align: center
 	margin-bottom: 5px
+	span
+		margin-right: 5px
 
 
 .list_item_price
@@ -241,16 +286,20 @@
 	text-decoration: line-through
 	text-align: center
 
-
+.list_item-price-null
+	font-size: 1.2em
+	font-weight: 700
+	line-height: 15px
+	text-align: center
+	color: #1d2029
+	margin: 25px 0 5px 0
 
 .list_item_buy_wrap
 	display: none
 	height: 0
 	justify-content: center
 	align-items: flex-end
-
-
-
+	margin-top: 20px
 
 .list_buy_form
 	text-align: center
@@ -312,6 +361,30 @@
 		color: #ffffff
 		outline: 0
 		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)
+
+.swal2-confirm
+	box-shadow: 0 5px 10px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15)
+	transition: box-shadow .15s ease-in-out
+.button_to_basket
+	outline: 0
+	border-color: #3bc915
+	background-color: #3bc915
+	box-shadow: 0 5px 10px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15)
+	transition: box-shadow .15s ease-in-out
+.to_basket
+	color: #ffffff
+	&:hover,
+	&:focus
+		color: #ffffff
+		text-decoration: none
+
+.swal2-confirm,
+.button_to_basket
+	&:hover,
+	&:focus
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)
+
+
 
 @include media-breakpoint-down(lg)
 	.list_item_wrap

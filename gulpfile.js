@@ -14,7 +14,6 @@ let paths = {
 			'node_modules/blazy/blazy.min.js', // npm vendor example for Lazy Load (npm i blazy --save-dev)
 			'node_modules/owl.carousel/dist/owl.carousel.min.js', // npm vendor example (npm install --save owl.carousel)
 			'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', // npm vendor example ( npm install @fancyapps/fancybox --save-dev)
-			'node_modules/sweetalert/dist/sweetalert.min.js', // npm vendor example ( npm install sweetalert --save-dev)
 			baseDir + '/js/app.js' // app.js. Always at the end
 		],
 		dest: baseDir + '/js',
